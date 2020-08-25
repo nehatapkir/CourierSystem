@@ -7,6 +7,6 @@ namespace CalculateDeliveryCost
 {
     public interface ICalculateDeliveryCost
     {
-        double GetTotalCost(Box box);
+        double GetTotalCost(DeliveryOption option);
     }
 }

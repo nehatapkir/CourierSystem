@@ -25,14 +25,21 @@ namespace CalculateDeliveryCost
                 default:
                     return 0;
             }
-        }    
+        }
 
-
-        public double GetTotalCost(Box box)
+        public double GetCostSpeedDelivery(double initialCost)
         {
-            var packageType = PackageDetailsUtil.GetPackageType(box);
-            var totalCost = CalculateDeliveryCostForParcel(packageType);          
+            return initialCost * 2;
+        }
 
+        public double GetTotalCost(DeliveryOption option)
+        {
+            var packageType = PackageDetailsUtil.GetPackageType(option.Box);
+            var totalCost = CalculateDeliveryCostForParcel(packageType);
+            if (option.IsSpeedDelivery)
+            {
+                totalCost = GetCostSpeedDelivery(totalCost);
+            }
             return totalCost;
         } 
     }
