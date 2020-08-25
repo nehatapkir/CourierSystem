@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculateDeliveryCost
 {
@@ -11,14 +8,20 @@ namespace CalculateDeliveryCost
         Small,
         Medium,
         Large,
-        XL,       
+        XL,
+        HeavyWeight,
         NA,
     }
 
     public static class PackageDetailsUtil
     {      
         public static PackageType GetPackageType(Box box)
-        {   
+        {
+            if (box.Weight > 50)
+            {
+                return PackageType.HeavyWeight;
+            }
+
             var dimensions = new List<double>() { box.Length, box.Breadth, box.Height };
            
             if(dimensions.Any(l=> l >= 100))

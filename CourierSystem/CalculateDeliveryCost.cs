@@ -21,7 +21,9 @@ namespace CalculateDeliveryCost
                 case (PackageType.Large):
                     return 15;
                 case (PackageType.XL):
-                    return 25;             
+                    return 25;
+                case (PackageType.HeavyWeight):
+                    return 50;
                 default:
                     return 0;
             }

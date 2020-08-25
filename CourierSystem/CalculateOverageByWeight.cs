@@ -14,7 +14,9 @@
                 case (PackageType.Large):
                     return CalculateExcessCost(6, weight);
                 case (PackageType.XL):
-                    return CalculateExcessCost(10, weight);        
+                    return CalculateExcessCost(10, weight);
+                case (PackageType.HeavyWeight):
+                    return CalculateExcessCost(50, weight, 1);
                 default:
                     return 0;
             }
