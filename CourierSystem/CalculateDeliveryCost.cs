@@ -1,14 +1,14 @@
-﻿using CalculateDeliveryCost;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CalculateDeliveryCost
 {
     public class CalculateDeliveryCost : ICalculateDeliveryCost
-    {   
+    {
+        CalculateOverageByWeight calculateOverageByWeight;
+
+        public CalculateDeliveryCost()
+        {
+            calculateOverageByWeight = new CalculateOverageByWeight();
+        }
 
         public double CalculateDeliveryCostForParcel(PackageType packageType)
         {
@@ -36,6 +36,7 @@ namespace CalculateDeliveryCost
         {
             var packageType = PackageDetailsUtil.GetPackageType(option.Box);
             var totalCost = CalculateDeliveryCostForParcel(packageType);
+            totalCost += calculateOverageByWeight.GetAdditionalCost(packageType, option.Box);
             if (option.IsSpeedDelivery)
             {
                 totalCost = GetCostSpeedDelivery(totalCost);

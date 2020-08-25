@@ -143,5 +143,6 @@ namespace Tests
             Assert.AreEqual(expectedCost, actualCost);
         }
 
+    
     }
 }
