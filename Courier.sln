@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courier", "Courier\Courier.csproj", "{12AAA790-7D17-4178-B935-34855C33494B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourierSystem", "CourierSystem\CourierSystem.csproj", "{D892C3D1-93C7-4640-8FEF-A77E06F1DDE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourierSystemTests", "CourierSystemTests\CourierSystemTests.csproj", "{68CABBB1-BCF3-495D-956F-0FC81286B96C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{12AAA790-7D17-4178-B935-34855C33494B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12AAA790-7D17-4178-B935-34855C33494B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12AAA790-7D17-4178-B935-34855C33494B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D892C3D1-93C7-4640-8FEF-A77E06F1DDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D892C3D1-93C7-4640-8FEF-A77E06F1DDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D892C3D1-93C7-4640-8FEF-A77E06F1DDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D892C3D1-93C7-4640-8FEF-A77E06F1DDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CABBB1-BCF3-495D-956F-0FC81286B96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CABBB1-BCF3-495D-956F-0FC81286B96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CABBB1-BCF3-495D-956F-0FC81286B96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CABBB1-BCF3-495D-956F-0FC81286B96C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
