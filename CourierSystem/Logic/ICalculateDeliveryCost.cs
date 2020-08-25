@@ -3,6 +3,6 @@ namespace CalculateDeliveryCost
 {
     public interface ICalculateDeliveryCost
     {
-        double GetTotalCost(DeliveryOption option);
+        Receipt GetTotalCost(Order order);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CalculateDeliveryCost
@@ -14,7 +15,16 @@ namespace CalculateDeliveryCost
     }
 
     public static class PackageDetailsUtil
-    {      
+    {
+        public static IEnumerable<List<PricePerBox>> SplitList(List<PricePerBox> priceBoxMap, int nSize = 3)
+        {
+            priceBoxMap = priceBoxMap.OrderByDescending(t => t.Price).ToList();
+            for (int i = 0; i < priceBoxMap.Count; i += nSize)
+            {
+                yield return priceBoxMap.GetRange(i, Math.Min(nSize, priceBoxMap.Count - i));
+            }
+        }
+
         public static PackageType GetPackageType(Box box)
         {
             if (box.Weight > 50)
