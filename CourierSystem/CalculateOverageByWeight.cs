@@ -2,7 +2,7 @@
 {
     class CalculateOverageByWeight 
     {
-        public double GetAdditionalCost(PackageType packageType, Box box)
+        internal double GetAdditionalCost(PackageType packageType, Box box)
         {
             var weight = box.Weight;
             switch (packageType)

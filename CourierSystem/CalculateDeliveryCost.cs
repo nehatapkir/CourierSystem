@@ -10,7 +10,7 @@ namespace CalculateDeliveryCost
             calculateOverageByWeight = new CalculateOverageByWeight();
         }
 
-        public double CalculateDeliveryCostForParcel(PackageType packageType)
+        private double CalculateDeliveryCostForParcel(PackageType packageType)
         {
             switch (packageType)
             {
@@ -29,7 +29,7 @@ namespace CalculateDeliveryCost
             }
         }
 
-        public double GetCostSpeedDelivery(double initialCost)
+        private double GetCostSpeedDelivery(double initialCost)
         {
             return initialCost * 2;
         }
